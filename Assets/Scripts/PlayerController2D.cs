@@ -12,6 +12,9 @@ public class PlayerController2D : NetworkBehaviour
 
     private InputSystem_Actions inputActions;
 
+    public bool canInteract = false;
+    public TaskArea currentTaskArea;
+
     // Fonction se lance avant le lancement du jeu
     private void Awake()
     {
@@ -36,6 +39,23 @@ public class PlayerController2D : NetworkBehaviour
         {
             inputActions.Player.Disable();
         }
+    }
+
+    private void Update()
+    {
+        if (HasStateAuthority && inputActions != null)
+        {
+            // Recupere les valeurs de l'input du joueur pour l'interaction
+            if (inputActions.Player.Interact.WasPressedThisFrame())
+            {
+                if (canInteract && currentTaskArea != null)
+                {
+                    // Appelle la fonction d'interaction dans le TaskArea
+                    currentTaskArea.OnPlayerInteract(this);
+                }
+            }
+        }
+
     }
 
     //deplacement du personnage en fonction de l'input du joueur
