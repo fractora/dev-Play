@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: -8518691076426806697}
   - component: {fileID: 4268659178030852657}
   - component: {fileID: 5447616858533248776}
+  - component: {fileID: -7544524689820255793}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,3 +291,16 @@ MonoBehaviour:
   StateHashes: 000000002241010311f224348a18fce4b9abd9d3i
   TriggerHashes: 00000000i
   TotalWords: 3
+--- !u!114 &-7544524689820255793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531909082718499139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710b5b602f483e7499101c59422fb9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTasks
+  playerTasks: []
